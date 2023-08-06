@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+     
+    <!-- Metadata
+    ================================================== -->
+    
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap" />
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom-style-1.css" rel="stylesheet" type="text/css" />
+    <style>
+        :root {
+            --primary-color: #00ffff;
+            --primary-color-rgb: 54, 210, 205;
+        }
+
+        .menu-button {
+            margin: 7px;
+        }
+        .text-center {
+    color: #ffffff !important;
+}
+
+div#chat-container {
+    background: none;
+    border: 1px solid #00ffff;
+}
+html {
+    background: none !important;
+}
+    </style>
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <script src="./code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body class="onepage dark-scheme">
+    <div id="wrapper">
+        <!-- header begin -->
+
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+         
+ 
+            <div id="de_modal">
+                <button class="button-close"></button>
+                <div class="d-modal-loader"></div>
+            </div>
+            <!-- load external content close -->
+            <section id="wrapbb"  >
+         
+               
+
+                <div class="container z-index-1000">
+                    <div class="row">
+                  
+                        <div class="col-lg-8 offset-lg-2 wow">
+                            <div class="contact_form_wrapper">
+                                <form id="audit_form" class="form-border">
+                                    <div class="text-center">
+                                        <div class="field-set">
+                                            <textarea name="message" id="question-input" class="form-control"
+                                                placeholder="/** Your solidity code goes here... */" required
+                                                minlength="23">/** Simple Reentrancy Exploit */
+
+pragma solidity ^0.8.0;
+
+contract SimpleReentrancy {
+    address payable public target;
+    uint public balance;
+
+    function setTarget(address payable _target) public {
+        target = _target;
+    }
+
+    function exploit() public {
+        target.call.value(balance)();
+    }
+
+    function deposit() public payable {
+        balance += msg.value;
+    }
+}
+                                                </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center">
+                                        <div class="col-md-6">
+                                            <div id="audit" class="mt10">
+                                                <button id="submit-button" class="btn-main">Audit</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div id="clear" class="mt10">
+                                                <button id="clear-button" class="btn-main">Clear</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="mt50">
+                                            <div id="chat-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="spacer-double"></div>
+                        </div>
+                    </div>
+                </div>
+             
+            </section>
+        </div>
+    
+    </div>
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="form.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.g-recaptcha').attr('data-theme', 'dark');
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            $(function () {
+                // jquery typed plugin
+                $(".typed").typed({
+                    stringsElement: $('.typed-strings'),
+                    typeSpeed: 300,
+                    backDelay: 500,
+                    loop: true,
+                    contentType: 'html', // or text
+                    // defaults to false for infinite loop
+                    loopCount: false,
+                    callback: function () { null; },
+                    resetCallback: function () { newTyped(); }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

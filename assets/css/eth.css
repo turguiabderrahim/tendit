@@ -1,0 +1,56 @@
+.bg-primary {
+  background-color: #00ffff !important;
+}
+
+.text-lightGreen {
+    color: #181818;
+}
+
+.text-primary {
+  color: #3a3a3a;
+}
+
+.bg-secondary {
+  background-color: #0f1728;
+}
+
+.bg-secondaryLight {
+    background-color: #a4a4a4;
+}
+
+.bg-lightGreen {
+    background-color: #3a3a3a;
+}
+input#address {
+    color: #000;
+}
+
+.text-black {
+    color: #ffffff;
+}
+
+.text-green {
+    color: #ffffff;
+}
+
+.bg-\[\#6a5c3f\] {
+    background-color: #3a3a3a;
+}
+
+.hover\:bg-hover:hover {
+    color: #0f1728;
+    background-color: #3a3a3a;
+}
+
+.active\:bg-active:active {
+    color: #3a3a3a;
+    background-color: #3a3a3a;
+}
+
+.border-primary {
+    border-color: #00ffff;
+}
+
+.border-black {
+    border-color: #ffffff;
+}
